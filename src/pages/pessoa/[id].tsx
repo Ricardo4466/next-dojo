@@ -1,8 +1,9 @@
-
 export async function getServerSideProps(context: any) {
   await new Promise((r) => setTimeout(r, 5000));
-  const response = await fetch(`/api/people/${context.params.id}`)
-  const person = await response.json()
+  const response = await fetch(
+    `http://localhost:3000/api/people/${context.params.id}`
+  );
+  const person = await response.json();
   return { props: person };
 }
 

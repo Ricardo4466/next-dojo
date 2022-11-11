@@ -14,4 +14,4 @@
 3 [X] User a função getStaticPaths e getStaticProps
   - com fallback false
 
-4 [] Refatorar o json pessoas para vir em uma api backend do proprio next
+4 [x] Refatorar o json pessoas para vir em uma api backend do proprio next

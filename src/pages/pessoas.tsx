@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 import Head from "next/head";
 import Link from "next/link";
 
-
 export default function Home() {
-
-  const [people, setPeople] = useState([])
+  const [people, setPeople] = useState([]);
 
   const getPeople = async () => {
-    const response = await fetch('/api/people')
-    const peopleResponse = await response.json()
-    setPeople(peopleResponse)
-  }
+    const response = await fetch("http://localhost:3000/api/people");
+    const peopleResponse = await response.json();
+    setPeople(peopleResponse);
+  };
 
-  useEffect(() => { getPeople() }, [])
+  useEffect(() => {
+    getPeople();
+  }, []);
 
   return (
     <div>
