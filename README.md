@@ -8,7 +8,7 @@
       [x] Criar um json com os pessoas
       [x] Criar uma pagina dinamica da pessoa (csr e ssr)
 
-2 [ ] User a função getServerSideProps do next
+2 [X] User a função getServerSideProps do next
   - problemas com performance
 
 3 [ ] User a função getStaticPaths e getStaticProps
