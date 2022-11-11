@@ -4,7 +4,6 @@ import Link from "next/link";
 import { people } from "../constants/people";
 
 export default function Home() {
-
   return (
     <div>
       <Head>
@@ -16,7 +15,8 @@ export default function Home() {
         <ul>
           {people.map((person) => (
             <li key={person.id}>
-              {`${person.id} - ${person.name} `}<Link href={`/pessoa/${person.id}`}>Ver</Link>
+              {`${person.id} - ${person.name} `}
+              <Link href={`/pessoa2/${person.id}`}>Ver</Link>
             </li>
           ))}
         </ul>
