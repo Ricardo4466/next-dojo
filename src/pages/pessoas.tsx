@@ -1,25 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-const people = [
-  {
-    id: 1,
-    name: 'Ana'
-  },
-  {
-    id: 2,
-    name: 'Everton'
-  },
-  {
-    id: 3,
-    name: 'Hercules'
-  },
-  {
-    id: 4,
-    name: 'Ricardo'
-  }
-]
-
+import { people } from "../constants/people";
 
 export default function Home() {
 

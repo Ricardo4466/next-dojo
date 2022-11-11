@@ -4,9 +4,9 @@
 
 ## Desafio
 1 [ ] [x] Criar uma pagina de pessoas
-    [x] Adicionar um botão para ver detalhes da pessoa pelo id
-  []Criar um json com os pessoas
-  Criar uma pagina dinamica da pessoa (csr e ssr)
+      [x] Adicionar um botão para ver detalhes da pessoa pelo id
+      [x] Criar um json com os pessoas
+      [x] Criar uma pagina dinamica da pessoa (csr e ssr)
 
 2 [ ] User a função getServerSideProps do next
   - problemas com performance
