@@ -3,14 +3,15 @@ import { people } from "../../constants/people";
 
 export async function getStaticPaths() {
   await new Promise((r) => setTimeout(r, 5000));
+
   return {
-    paths: [
-      {
-        params: {
-          id: "1",
-        },
-      },
-    ],
+    paths: people.map((p) => {
+      return {
+        params:{
+          id: p.id.toString()
+        }
+      }
+    }),
     fallback: true, // false true blocking
   };
 }
