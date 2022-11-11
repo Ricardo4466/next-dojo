@@ -1,13 +1,14 @@
-import { useRouter } from "next/router";
-import { people } from "../../constants/people";
 
 export async function getStaticPaths() {
   await new Promise((r) => setTimeout(r, 5000));
 
+  const response = await fetch('/api/people')
+  const people = await response.json()
+
   return {
-    paths: people.map((p) => {
+    paths: people.map((p: any) => {
       return {
-        params:{
+        params: {
           id: p.id.toString()
         }
       }
@@ -17,7 +18,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: any) {
-  const person = people.find((p: any) => p.id == context.params.id);
+  const response = await fetch(`/api/people/${context.params.id}`)
+  const person = await response.json()
   return { props: person };
 }
 

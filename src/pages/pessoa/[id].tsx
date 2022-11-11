@@ -1,9 +1,8 @@
-import { useRouter } from "next/router";
-import { people } from "../../constants/people";
 
 export async function getServerSideProps(context: any) {
   await new Promise((r) => setTimeout(r, 5000));
-  const person = people.find((p: any) => p.id == context.params.id);
+  const response = await fetch(`/api/people/${context.params.id}`)
+  const person = await response.json()
   return { props: person };
 }
 
